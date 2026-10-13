@@ -39,7 +39,7 @@ K.def(function () {
     gsap.set(c.lastChild, { opacity: 0, x: -20 });
     return c;
   });
-  const trophy = A.add(K.img('trophy', 1450, 650, 150, { from: 18 }));
+  const trophy = A.add(K.img('trophy', 1770, 440, 120, { from: 18 }));
   // photo (assets/photo.jpg, cropped from the Pearson stage picture)
   const photo = A.add(h('div', { x: 1360, y: 110, w: 380, h: 470, style: { borderRadius: '28px', overflow: 'hidden', boxShadow: '0 24px 60px rgba(23,17,31,.22)', background: '#ddd' } },
     (() => { const i = document.createElement('img'); i.src = 'assets/photo.jpg'; i.alt = 'Александър Дянов'; i.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block'; return i; })()));

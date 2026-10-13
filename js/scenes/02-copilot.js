@@ -163,9 +163,9 @@ K.def(function () {
     pane.append(d); gsap.set(d, { opacity: 0, y: 40 });
     return d;
   });
-  const planList = h('div', { x: 30, y: 350, w: PW - 60 });
-  ['1  Намери', '2  Провери', '3  Изведи'].forEach(t => planList.append(h('div', { text: t, style: { fontSize: '25px', fontWeight: 700, padding: '10px 18px', margin: '8px 0', borderRadius: '12px', background: 'rgba(23,17,31,.06)' } })));
-  planList.append(h('div', { text: 'Одобри', style: { display: 'inline-block', marginTop: '10px', fontSize: '24px', fontWeight: 800, padding: '10px 22px', borderRadius: '12px', background: 'var(--acc)', color: K.C.ink } }));
+  const planList = h('div', { x: 30, y: 320, w: PW - 60 });
+  ['1  Намери', '2  Провери', '3  Изведи'].forEach(t => planList.append(h('div', { text: t, style: { fontSize: '21px', fontWeight: 700, padding: '6px 16px', margin: '5px 0', borderRadius: '12px', background: 'rgba(23,17,31,.06)' } })));
+  planList.append(h('div', { text: 'Одобри', style: { display: 'inline-block', marginTop: '6px', fontSize: '21px', fontWeight: 800, padding: '8px 20px', borderRadius: '12px', background: 'var(--acc)', color: K.C.ink } }));
   pane.append(planList); gsap.set(planList, { opacity: 0, y: 30 });
   // input + mention
   const input = h('div', { x: 30, y: WH - 190 - 100, w: PW - 60, h: 72, style: { borderRadius: '18px', border: '1.5px solid var(--line2)', background: 'var(--card)', display: 'flex', alignItems: 'center', padding: '0 22px', fontSize: '28px', fontWeight: 600 } });

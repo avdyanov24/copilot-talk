@@ -141,11 +141,11 @@ K.def(function () {
   const SC = 0.62;
   const fTitle = F.add(h('div.h2', { x: 120, y: 90, text: 'Число или формула?' }));
   const fTitleW = maskWords(fTitle);
-  const fSub = F.add(h('div.small.dim', { x: 1160, y: 790, w: 620, style: { fontSize: '24px', lineHeight: 1.35 },
-    html: 'И двете карти показват едно и също: <b style="color:var(--ink)">колко % от времето на екип Разработка е заето с платена работа</b> (натовареност).' }));
+  const fSub = F.add(h('div.small.dim', { x: 1160, y: 795, w: 620, style: { fontSize: '22px', lineHeight: 1.3 },
+    html: 'И двете показват <b style="color:var(--ink)">колко % от времето на екип Разработка е заето с платена работа</b>.' }));
   gsap.set(fSub, { opacity: 0, y: 20 });
   function valueCard(x, label, sub) {
-    const c = F.add(h('div.card', { x, y: 290, w: 290, h: 340, style: { padding: '28px' } }));
+    const c = F.add(h('div.card', { x, y: 245, w: 290, h: 340, style: { padding: '28px' } }));
     c.append(h('div.label', { text: label }));
     const v = h('div', { text: '78%', style: { fontSize: '104px', fontWeight: 800, letterSpacing: '-0.04em', marginTop: '26px' } });
     c.append(v);
@@ -155,18 +155,18 @@ K.def(function () {
   }
   const numCard = valueCard(1160, 'Готово число', 'натовареност на Разработка, написана на ръка');
   const frmCard = valueCard(1480, 'Формула', 'натовареност на Разработка, изчислена');
-  const stale = F.add(h('span.tag', { x: 1190, y: 262, text: 'остаряло', style: { background: 'var(--card2)', color: 'var(--ink2)' } }));
+  const stale = F.add(h('span.tag', { x: 1190, y: 217, text: 'остаряло', style: { background: 'var(--card2)', color: 'var(--ink2)' } }));
   gsap.set(stale, { opacity: 0, scale: 0.6 });
-  const fBar = F.add(h('div.card.mono', { x: 1160, y: 650, w: 610, style: { padding: '20px 24px', fontSize: '23px', lineHeight: 1.5, color: 'var(--ink2)' },
+  const fBar = F.add(h('div.card.mono', { x: 1160, y: 605, w: 610, style: { padding: '20px 24px', fontSize: '23px', lineHeight: 1.5, color: 'var(--ink2)' },
     html: '<span class="acc">=</span>SUMIFS(Часове[Фактурирани];<br>&nbsp;Часове[Екип]; "Разработка")<br>&nbsp;/ (Екип[Капацитет] * 13)' }));
   gsap.set(fBar, { opacity: 0, y: 30 });
-  const fTake = F.add(h('div', { x: 1160, y: 890, w: 620 },
+  const fTake = F.add(h('div', { x: 1160, y: 870, w: 620 },
     h('div.h3', { html: 'Формули, <span class="acc">не готови числа.</span>' }),
-    h('div.small.dim', { text: 'Виждам откъде идва резултатът и той се обновява.', style: { marginTop: '8px' } })));
+    h('div.small.dim', { text: 'Виждаме откъде идва резултатът.', style: { marginTop: '8px' } })));
   gsap.set(fTake, { opacity: 0, y: 30 });
   const fSvg = F.add(svgBox(0, 0, 1920, 1080));
   const cellF = { x: 120 + (colX[5] + colW[5] - 60) * SC, y: 250 + (HD + RH * 1.5) * SC };
-  const wire = s('path', { d: `M ${cellF.x} ${cellF.y} C ${cellF.x + 120} ${120}, 1520 ${110}, 1625 ${286}`, stroke: K.C.acc, 'stroke-width': 4, fill: 'none', 'stroke-dasharray': '3 10', 'stroke-linecap': 'round' });
+  const wire = s('path', { d: `M ${cellF.x} ${cellF.y} C ${cellF.x + 120} ${120}, 1520 ${110}, 1625 ${241}`, stroke: K.C.acc, 'stroke-width': 4, fill: 'none', 'stroke-dasharray': '3 10', 'stroke-linecap': 'round' });
   fSvg.append(wire); gsap.set(wire, { drawSVG: '0%' });
   const georgiF = dataCells[0].row[dataCells[0].row.length - 1];
   const grpPos = (sc, x, y) => ({ x: sc.x + x - (M.x + GX), y: sc.y + y - (M.y + GY) });

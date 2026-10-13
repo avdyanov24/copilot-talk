@@ -111,7 +111,7 @@ K.def(function () {
   const yLblsK = [L(PL - 150, Y(1) - 18, '100%', { width: '135px', textAlign: 'right', color: K.C.accInk }), L(PL - 150, Y(0) - 18, '0%', { width: '135px', textAlign: 'right', color: K.C.accInk })];
   const yLblsB = [L(PL - 150, Y(1) - 18, '900 ч', { width: '135px', textAlign: 'right' }), L(PL - 150, Y(0) - 18, '0 ч', { width: '135px', textAlign: 'right' })];
   const xLblsG = [[0, '06.07'], [4, '03.08'], [8, '31.08'], [12, '28.09'], [16, '26.10']].map(([w, d]) => L(X(w) - 34, PT + PH + 16, d));
-  const lblPlan = L(X(9.6), Y(9.6 / 16) + 50, 'Планирани часове', { color: 'var(--ink)' });
+  const lblPlan = L(X(3.2), Y(3.2 / 16) + 50, 'Планирани часове', { color: 'var(--ink)' });
   const lblAct = L(X(0.2), Y(0.50), 'Реално изработени часове', { color: K.C.accInk });
   const lblGap = L(X(1.0), Y(0.82), 'над плана → часовете се изразходват по-бързо ↘', { fontSize: '24px', color: 'var(--ink)', background: 'rgba(255,255,255,.9)', padding: '4px 10px', borderRadius: '8px' });
   const lblZero = L(X(7.0), Y(1) - 64, 'над бюджета преди крайния срок', { color: K.C.accInk });
@@ -133,9 +133,9 @@ K.def(function () {
     return e;
   });
   [kpis.slice(0, 3), kpis.slice(3)].forEach(row => { let x = 180; row.forEach(e => { e.style.left = x + 'px'; x += e.offsetWidth + 20; gsap.set(e, { opacity: 0, scale: 0.6 }); }); });
-  const formula = B.add(h('div.card', { x: 340, y: 520, w: 640, style: { padding: '28px 32px', borderColor: 'rgba(250,157,19,.6)' } },
+  const formula = B.add(h('div.card', { x: 1120, y: 695, w: 480, style: { padding: '18px 24px', borderColor: 'rgba(250,157,19,.6)' } },
     h('div.label', { text: 'Прогноза при приключване' }),
-    h('div', { html: 'изразходвано <span class="acc">+</span> среден седмичен брой часове <span class="acc">×</span> оставащи седмици', style: { fontSize: '33px', fontWeight: 700, lineHeight: 1.3, marginTop: '10px' } })));
+    h('div', { html: 'изразходвано <span class="acc">+</span> среден седмичен брой часове <span class="acc">×</span> оставащи седмици', style: { fontSize: '25px', fontWeight: 700, lineHeight: 1.3, marginTop: '6px' } })));
   gsap.set(formula, { opacity: 0, y: 30 });
 
   step(B, 'burn-arrive', 'Какво да включим: показателите.', t => {
