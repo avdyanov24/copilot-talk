@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Презентатор · Copilot в Microsoft 365</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/presenter.css">
+</head>
+<body>
+<header>
+  <div class="sec"><span id="secN" class="n"></span><span id="secName"></span></div>
+  <div class="win" id="secWin"></div>
+  <div class="stepno" id="stepNo"></div>
+  <div class="conn" id="conn" title="Връзка с основния прозорец"></div>
+</header>
+<main>
+  <section class="left">
+    <div class="beat"><div class="k">Сега</div><div id="now" class="now"></div></div>
+    <div class="beat next"><div class="k">Следва →</div><div id="next"></div></div>
+    <div class="plain" id="plain"></div>
+    <div id="behind" class="behind" hidden></div>
+    <div class="notes" id="notes"></div>
+  </section>
+  <aside class="right">
+    <div class="timer">
+      <div class="big" id="elapsed">0:00</div>
+      <div class="sub"><span id="status" class="status"></span><span id="clock" class="clock"></span></div>
+      <div class="bar" id="bar"><div class="cur" id="barCur"></div><div class="mark" id="barMark"></div></div>
+      <div class="btns">
+        <button id="tStart">Старт</button><button id="tReset" class="ghost">Нулирай</button>
+      </div>
+    </div>
+    <div class="preview"><div class="k">Текущ слайд (на екрана)</div><div class="pv"><iframe id="pv0" tabindex="-1"></iframe></div></div>
+    <div class="preview"><div class="k">Следващ кадър</div><div class="pv"><iframe id="pv" tabindex="-1"></iframe></div></div>
+    <div class="nav">
+      <button id="bPrev">← Назад</button><button id="bNext" class="acc">Напред →</button><button id="bBlack" class="ghost">Черен екран (B)</button>
+    </div>
+    <details><summary>Въпроси — резервни отговори</summary><div id="qa"></div></details>
+    <details><summary>Всички стъпки</summary><div id="steps" class="steps"></div></details>
+    <details><summary>Резервни планове</summary><div id="backup"></div></details>
+  </aside>
+</main>
+<script src="js/data.js"></script>
+<script src="js/presenter.js"></script>
+</body>
+</html>
